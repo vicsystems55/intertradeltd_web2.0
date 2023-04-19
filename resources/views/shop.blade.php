@@ -3,7 +3,7 @@
 @section('content')
 
 		<!-- :: Breadcrumb Header -->
-        <section class="breadcrumb-header style-2" id="page" style="background-image: url(assets/images/header/02_breadcrumb-header.jpg)">
+        <section class="breadcrumb-header style-2" id="page" style="background-image: url(assets/images/header/03_header.jpg)">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">

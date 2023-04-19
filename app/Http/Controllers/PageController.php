@@ -62,6 +62,8 @@ class PageController extends Controller
     {
         # code...
 
+ 
+
         return view($slug);
     }
 

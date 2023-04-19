@@ -22,8 +22,8 @@
                         <div class="content-box d-flex align-items-center justify-content-between">
                             <div class="logo">
                                 <a href="index.html" class="logo-nav">
-                                    <img class="img-fluid one" src="assets/images/logo/01_logo.png" alt="01 Logo">
-                                    <img class="img-fluid two" src="assets/images/logo/02_logo.png" alt="02 Logo">
+                                    <img class="img-fluid one" src="{{asset('/')}}assets/images/logo/01_logo.png" alt="01 Logo">
+                                    <img class="img-fluid two" src="{{asset('/')}}assets/images/logo/02_logo.png" alt="02 Logo">
                                 </a>
                                 <a href="#open-nav-bar-menu" class="open-nav-bar">
 
@@ -107,22 +107,22 @@
                         <div class="contact-box">
                             <i class="ar-icons-call"></i>
                             <div class="box">
-                                <a class="phone" href="tel:01212843661">0121284 3661</a>
-                                <a class="phone" href="tel:01029134630">0102913 4630</a>
+                                <a class="phone" href="tel:+2348057674378">+234 805 767 4378</a>
+
                             </div>
                         </div>
                         <div class="contact-box">
                             <i class="ar-icons-email"></i>
                             <div class="box">
-                                <a class="mail" href="mailto:support@InterTrade Ltd..com">Support@InterTrade Ltd..com</a>
-                                <a class="mail" href="mailto:mailbox@ar-coder.com">MailBox@AR-Coder.com</a>
+                                <a class="mail" href="mailto:enquiry@intertradeltd.biz">enquiry@intertradeltd.biz</a>
+
                             </div>
                         </div>
                         <div class="contact-box">
                             <i class="ar-icons-location"></i>
                             <div class="box">
-                                <p>14D Street Brooklyn,</p>
-                                <p>New York.</p>
+                                <p>Plot 798 Olajide Laleye Street, Jahi, Abuja Nigeria</p>
+                                <p>Abuja, Nigeria.</p>
                             </div>
                         </div>
                     </div>

@@ -1,10 +1,15 @@
         <!-- :: Footer -->
         <footer class="footer">
+
+            <!-- Button trigger modal -->
+            <example-component apiurl="{{config('app.url')}}"></example-component>
             <div class="container">
+
+
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="logo">
-                            <img class="img-fluid" src="assets/images/logo/01_logo.png" alt="Footer Logo">
+                            <img class="img-fluid" src="{{asset('/')}}assets/images/logo/01_logo.png" alt="Footer Logo">
                             <p>InterTrade Ltd. is a provider of engineering services, with a focus on solar power system consultancy and cold chain equipment solutions. We cater to various fields in any related industry.</p>
                         </div>
                     </div>
