@@ -26,8 +26,8 @@
                                             </li>
                                         </ul>
                                         <div class="btn-box">
-                                            <a class="btn-1 move-section" href="#start"><span>Let's Start</span></a>
-                                            <a class="btn-1 btn-2 ml-30" href="01_services.html"><span>Our Services</span></a>
+
+                                            <a class="btn-1 btn-2 ml-30" href="/services"><span>Our Services</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                         <h1 class="handline">Cold Chain Equipments Solutions</h1>
                                         <p class="about-website">We provide specialized devices and technologies used to maintain the integrity and safety of temperature-sensitive products throughout the supply chain.</p>
                                         <div class="btn-box">
-                                            <a class="btn-1 btn-2" href="01_about-us.html"><span>About Us</span></a>
+                                            <a class="btn-1 btn-2" href="/about"><span>About Us</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -66,8 +66,8 @@
                                         <p class="about-website">We provide professional consulting services for solar power systems and cold chain solutions, offering expert guidance on design, implementation, and optimization to ensure optimal efficiency and performance.</p>
 
                                         <div class="btn-box">
-                                            <a class="btn-1 btn-2" href="01_request-quote.html"><span>Request Quote</span></a>
-                                            <a class="btn-1 btn-3 ml-30" href="01_about-us.html"><span>Read More</span></a>
+
+                                            <a class="btn-1 btn-3 ml-30" href="/about"><span>Read More</span></a>
                                         </div>
                                     </div>
                                 </div>
