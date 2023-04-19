@@ -2161,7 +2161,7 @@ var render = function render() {
       expression: "!signedup"
     }],
     staticClass: "content"
-  }, [_c("p", [_vm._v("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore molestiae expedita iusto\n                                nemo facere vitae magnam reiciendis! Natus, magnam? Quo nulla rem ea aliquid possimus\n                                facere quibusdam distinctio eos dicta.")]), _vm._v(" "), _c("div", {
+  }, [_c("p", [_vm._v("Sign up for Intertrade Ltd's newsletter and stay in the loop with the latest updates on our products, deals, and events. Don't miss out on exclusive offers and valuable information. Join now!")]), _vm._v(" "), _c("div", {
     staticClass: "inner-add-comments form-contact-2"
   }, [_c("div", {}, [_c("div", {
     staticClass: "col-md-12 inner-add-comments-box"
@@ -2220,7 +2220,17 @@ var render = function render() {
     }
   }, [_c("span", [_vm._v(_vm._s(_vm.loading ? "Signing you up..." : "Submit"))])]), _vm._v(" "), _c("span", {
     staticClass: "out-message"
-  })])])])]), _vm._v(" "), _vm._m(1)])])])])])]);
+  })])])])]), _vm._v(" "), _c("div", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.signedup,
+      expression: "signedup"
+    }],
+    staticClass: "py-5"
+  }, [_c("h6", {
+    staticClass: "text-center"
+  }, [_vm._v("Thank you for signing up to our newsletter.")])])])])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -2240,14 +2250,6 @@ var staticRenderFns = [function () {
       "aria-label": "Close"
     }
   })]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "py-5"
-  }, [_c("h6", {
-    staticClass: "text-center"
-  }, [_vm._v("Thank you for signing up to our newsletter.")])]);
 }];
 render._withStripped = true;
 

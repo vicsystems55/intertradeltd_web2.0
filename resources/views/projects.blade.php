@@ -10,7 +10,7 @@
                         <div class="banner">
                             <h1>Our Projects</h1>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><i class="fas fa-angle-right"></i></li>
                                 <li>Our Projects</li>
                             </ul>
@@ -39,7 +39,7 @@
 						<div class="projects-item">
 							<span></span>
 							<div class="img-box">
-								<img class="img-fluid projects-item-img" src="assets/images/projects/01_projects.jpg" alt="01 projects">
+								<img class="img-fluid projects-item-img" src="assets/images/projects/00_projects.jpg" alt="01 projects">
 							</div>
 							<div class="hover-box">
 								<div class="text-box">
@@ -79,7 +79,7 @@
 							</div>
 							<div class="hover-box">
 								<div class="text-box">
-									<div class="tags"><a href="02_projects.html">Solar</div>
+									<div class="tags"><a href="/projects">Solar</div>
 									<h4><a href="">Solar installation at Benue State Primary Health Care Board.</a></h4>
 								</div>
 								<ul class="projects-icon">
@@ -133,7 +133,7 @@
 							</div>
 							<div class="hover-box">
 								<div class="text-box">
-									<div class="tags"><a href="02_projects.html">Cold Chain</div>
+									<div class="tags"><a href="/projects">Cold Chain</div>
 									<h4><a href="">Installation of Solar Direct Drive (SDD) Walk in Cold-room (WICR) National Cold Store Airport Road Abuja for National Primary Healthcare Development Agency (NPHCDA)</a></h4>
 								</div>
 								<ul class="projects-icon">
@@ -151,11 +151,11 @@
 							</div>
 							<div class="hover-box">
 								<div class="text-box">
-									<div class="tags"><a href="02_projects.html">Cold Chain Equipments</div>
-									<h4><a href="02_projects.html">Supply and Installation of 23 Units SDDs to Delta State Primary Healthcare Agency</a></h4>
+									<div class="tags"><a href="/projects">Cold Chain Equipments</div>
+									<h4><a href="/projects">Supply and Installation of 23 Units SDDs to Delta State Primary Healthcare Agency</a></h4>
 								</div>
 								<ul class="projects-icon">
-									<li><a href="02_projects.html"><i class="fas fa-link"></i></a></li>
+									<li><a href="/projects"><i class="fas fa-link"></i></a></li>
 									<li><a class="popup" href="assets/images/projects/02_projects.jpg"><i class="far fa-eye"></i></a></li>
 								</ul>
 							</div>
@@ -170,11 +170,11 @@
 							</div>
 							<div class="hover-box">
 								<div class="text-box">
-									<div class="tags"><a href="02_projects.html">Iceliners</div>
-									<h4><a href="02_projects.html">Supply and Installation of Ice liners FCT</a></h4>
+									<div class="tags"><a href="/projects">Iceliners</div>
+									<h4><a href="/projects">Supply and Installation of Ice liners FCT</a></h4>
 								</div>
 								<ul class="projects-icon">
-									<li><a href="02_projects.html"><i class="fas fa-link"></i></a></li>
+									<li><a href="/projects"><i class="fas fa-link"></i></a></li>
 									<li><a class="popup" href="assets/images/projects/02_projects.jpg"><i class="far fa-eye"></i></a></li>
 								</ul>
 							</div>
@@ -185,16 +185,16 @@
 						<div class="projects-item">
 							<span></span>
 							<div class="img-box">
-								<img class="img-fluid projects-item-img" src="assets/images/projects/02_projects.jpg" alt="02 projects">
+								<img class="img-fluid projects-item-img" src="assets/images/projects/vaccine.jpg" alt="02 projects">
 							</div>
 							<div class="hover-box">
 								<div class="text-box">
-									<div class="tags"><a href="02_projects.html">Vaccine Carriers</div>
-									<h4><a href="02_projects.html">Supply of 550 units of Freeze Free Vaccine Carries (FFVC) to Delta State Primary Healthcare agency</a></h4>
+									<div class="tags"><a href="/projects">Vaccine Carriers</div>
+									<h4><a href="/projects">Supply of 550 units of Freeze Free Vaccine Carries (FFVC) to Delta State Primary Healthcare agency</a></h4>
 								</div>
 								<ul class="projects-icon">
-									<li><a href="02_projects.html"><i class="fas fa-link"></i></a></li>
-									<li><a class="popup" href="assets/images/projects/02_projects.jpg"><i class="far fa-eye"></i></a></li>
+									<li><a href="/projects"><i class="fas fa-link"></i></a></li>
+									<li><a class="popup" href="assets/images/projects/vaccine.jpg"><i class="far fa-eye"></i></a></li>
 								</ul>
 							</div>
 						</div>

@@ -18,9 +18,7 @@
                         <div class="add-comments">
 
                             <div v-show="!signedup" class="content">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore molestiae expedita iusto
-                                    nemo facere vitae magnam reiciendis! Natus, magnam? Quo nulla rem ea aliquid possimus
-                                    facere quibusdam distinctio eos dicta.</p>
+                                <p>Sign up for Intertrade Ltd's newsletter and stay in the loop with the latest updates on our products, deals, and events. Don't miss out on exclusive offers and valuable information. Join now!</p>
                                 <div class="inner-add-comments form-contact-2">
                                     <div class="">
                                         <div class="col-md-12 inner-add-comments-box">
@@ -40,7 +38,7 @@
                                 </div>
                             </div>
 
-                            <div class="py-5">
+                            <div v-show="signedup" class="py-5">
                                 <h6 class="text-center">Thank you for signing up to our newsletter.</h6>
                             </div>
                         </div>
@@ -111,6 +109,8 @@ export default {
         console.log('Component mounted.')
 
         if (localStorage.getItem('registeredLead') == null) {
+
+            
 
             setTimeout(() => {
 
