@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailCampaignController;
 use App\Http\Controllers\NewsLetterSignUpsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/news-letter-signup', [NewsLetterSignUpsController::class, 'signUp']);
+
+Route::get('/fire-campaign', [EmailCampaignController::class, 'fireCampaign']);
+
