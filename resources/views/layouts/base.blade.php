@@ -69,12 +69,11 @@
 
         <!-- :: JavaScript Files -->
         <!-- :: jQuery JS -->
-        <script src="{{asset('js/app.js')}}"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js" integrity="sha512-HNbo1d4BaJjXh+/e6q4enTyezg5wiXvY3p/9Vzb20NIvkJghZxhzaXeffbdJuuZSxFhJP87ORPadwmU9aN3wSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/jquery-3.6.0.min.js"></script>
 
         <!-- :: Bootstrap JS Bundle With Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
 
         <!-- :: Owl Carousel JS -->
         <script src="{{asset('/')}}assets/js/owl.carousel.min.js"></script>
@@ -83,13 +82,13 @@
         <script src="{{asset('/')}}assets/js/lity.min.js"></script>
 
         <!-- :: Nice Select -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/jquery.nice-select.min.js"></script>
 
         <!-- :: Waypoints -->
         <script src="{{asset('/')}}assets/js/jquery.waypoints.min.js"></script>
 
         <!-- :: CounterUp -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/jquery.counterup.min.js"></script>
 
         <!-- :: Magnific Popup -->
         <script src="{{asset('/')}}assets/js/jquery.magnific-popup.min.js"></script>
@@ -98,9 +97,8 @@
         <script src="{{asset('/')}}assets/js/mixitup.min.js"></script>
 
         <!-- :: Main JS -->
-        <script src="{{asset('/')}}assets/js/main.js"></script>
-
-        {{-- <script src="{{asset('/')}}assets/js/ajax-script.js"></script> --}}
+        <script src="{{asset('/')}}assets/js/main.js"></script><script src="{{asset('/')}}assets/js/ajax-script.js"></script>
+        <script src="{{asset('js/app.js')}}"></script>
 
 
     </body>
