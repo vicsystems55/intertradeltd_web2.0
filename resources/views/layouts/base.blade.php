@@ -71,20 +71,16 @@
         <!-- :: JavaScript Files -->
         <!-- :: jQuery JS -->
 
-        {{-- <script src="{{asset('/')}}assets/js/jquery-3.6.0.min.js"></script> --}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/jquery-3.6.0.min.js"></script>
 
         <!-- :: Bootstrap JS Bundle With Popper JS -->
-        {{-- <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script> --}}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
 
         <!-- :: Owl Carousel JS -->
-        {{-- <script src="{{asset('/')}}assets/js/owl.carousel.min.js"></script> --}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/owl.carousel.min.js"></script>
 
         <!-- :: Lity -->
-        {{-- <script src="{{asset('/')}}assets/js/lity.min.js"></script> --}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js" integrity="sha512-UU0D/t+4/SgJpOeBYkY+lG16MaNF8aqmermRIz8dlmQhOlBnw6iQrnt4Ijty513WB3w+q4JO75IX03lDj6qQNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/lity.min.js"></script>
 
         <!-- :: Nice Select -->
         <script src="{{asset('/')}}assets/js/jquery.nice-select.min.js"></script>
@@ -93,9 +89,7 @@
         <script src="{{asset('/')}}assets/js/jquery.waypoints.min.js"></script>
 
         <!-- :: CounterUp -->
-        {{-- <script src="{{asset('/')}}assets/js/jquery.counterup.min.js"></script> --}}
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{{asset('/')}}assets/js/jquery.counterup.min.js"></script>
 
         <!-- :: Magnific Popup -->
         <script src="{{asset('/')}}assets/js/jquery.magnific-popup.min.js"></script>
