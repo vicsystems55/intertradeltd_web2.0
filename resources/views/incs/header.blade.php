@@ -73,7 +73,7 @@
                                         <i class="ar-icons-phone"></i>
                                         <div class="content-box">
                                             <span>Phone Number</span>
-                                            <a href="tel:01212843661">+234 805 767 4378</a>
+                                            <a href="+2348057674378">+234 805 767 4378</a>
                                         </div>
                                     </div>
                                 </li>
