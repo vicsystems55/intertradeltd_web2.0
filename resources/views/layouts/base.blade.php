@@ -66,6 +66,7 @@
         </div>
 
 
+        <script src="{{asset('js/app.js')}}"></script>
 
         <!-- :: JavaScript Files -->
         <!-- :: jQuery JS -->
@@ -99,7 +100,6 @@
         <!-- :: Main JS -->
         <script src="{{asset('/')}}assets/js/main.js"></script>
         <script src="{{asset('/')}}assets/js/ajax-script.js"></script>
-        <script src="{{asset('js/app.js')}}"></script>
 
 
     </body>
