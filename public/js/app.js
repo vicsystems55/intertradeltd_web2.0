@@ -2161,7 +2161,9 @@ var render = function render() {
       expression: "!signedup"
     }],
     staticClass: "content"
-  }, [_c("p", [_vm._v("Sign up for Intertrade Ltd's newsletter and stay in the loop with the latest updates on our products, deals, and events. Don't miss out on exclusive offers and valuable information. Join now!")]), _vm._v(" "), _c("div", {
+  }, [_c("p", {
+    staticClass: "text-dark"
+  }, [_vm._v("Sign up for Intertrade Ltd's newsletter and stay in the loop with the latest updates on our products, deals, and events. Don't miss out on exclusive offers and valuable information. Join now!")]), _vm._v(" "), _c("div", {
     staticClass: "inner-add-comments form-contact-2"
   }, [_c("div", {}, [_c("div", {
     staticClass: "col-md-12 inner-add-comments-box"
@@ -2236,7 +2238,7 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "modal-header py-5"
+    staticClass: "modal-header py-3"
   }, [_c("h4", {
     staticClass: "modal-title",
     attrs: {

@@ -25,42 +25,42 @@
                                     <img class="img-fluid one" src="{{asset('/')}}assets/images/logo/01_logo.png" alt="01 Logo">
                                     <img class="img-fluid two" src="{{asset('/')}}assets/images/logo/02_logo.png" alt="02 Logo">
                                 </a>
-                                <a href="#open-nav-bar-menu" class="open-nav-bar">
-
-
-
+                                 <a href="#open-nav-bar-menu" class="open-nav-bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </a>
                             </div>
                             <div class="nav-bar-links" id="open-nav-bar-menu">
                                 <ul class="level-1">
                                     <li class="item-level-1 ">
-                                        <a href="/" class="link-level-1 color-active">Home</a>
+                                        <a href="/" class="link-level-1 {{request()->is('')?'color-active':''}}">Home</a>
 
                                     </li>
                                     <li class="item-level-1 ">
-                                        <a href="/about" class="link-level-1">About Us</a>
+                                        <a href="/about" class="link-level-1 {{request()->is('about')?'color-active':''}}">About Us</a>
 
                                     </li>
                                     <li class="item-level-1 ">
-                                        <a href="/services" class="link-level-1">Services</a>
+                                        <a href="/services" class="link-level-1 {{request()->is('services')?'color-active':''}} ">Services</a>
 
                                     </li>
                                     <li class="item-level-1 ">
-                                        <a href="/projects" class="link-level-1">Projects</a>
+                                        <a href="/projects" class="link-level-1 {{request()->is('projects')?'color-active':''}}">Projects</a>
 
                                     </li>
                                     <li class="item-level-1 ">
-                                        <a href="/blog" class="link-level-1">Blog</a>
+                                        <a href="/blog" class="link-level-1 {{request()->is('blog')?'color-active':''}}">Blog</a>
 
                                     </li>
 
                                     <li class="item-level-1 ">
-                                        <a href="/shop" class="link-level-1">Store</a>
+                                        <a href="/shop" class="link-level-1 {{request()->is('shop')?'color-active':''}}">Store</a>
 
                                     </li>
 
                                     <li class="item-level-1">
-                                        <a href="/contact" class="link-level-1">Contact</a>
+                                        <a href="/contact" class="link-level-1 {{request()->is('contact')?'color-active':''}}">Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -72,7 +72,7 @@
                                     <div class="nav-bar-contact">
                                         <i class="ar-icons-phone"></i>
                                         <div class="content-box">
-                                            <span>Phone Number</span>
+                                            <span>Phone</span>
                                             <a href="+2348057674378">+234 805 767 4378</a>
                                         </div>
                                     </div>
@@ -82,6 +82,8 @@
                                 </li>
                             </ul>
                         </div>
+
+
                     </div>
                 </nav>
             </header>

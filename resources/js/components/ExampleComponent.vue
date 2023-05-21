@@ -10,7 +10,7 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content">
-                    <div class="modal-header py-5">
+                    <div class="modal-header py-3">
                         <h4 class="modal-title" id="exampleModalLabel">Sign up to our newsletter</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -18,7 +18,7 @@
                         <div class="add-comments">
 
                             <div v-show="!signedup" class="content">
-                                <p>Sign up for Intertrade Ltd's newsletter and stay in the loop with the latest updates on our products, deals, and events. Don't miss out on exclusive offers and valuable information. Join now!</p>
+                                <p class="text-dark">Sign up for Intertrade Ltd's newsletter and stay in the loop with the latest updates on our products, deals, and events. Don't miss out on exclusive offers and valuable information. Join now!</p>
                                 <div class="inner-add-comments form-contact-2">
                                     <div class="">
                                         <div class="col-md-12 inner-add-comments-box">
@@ -110,7 +110,7 @@ export default {
 
         if (localStorage.getItem('registeredLead') == null) {
 
-            
+
 
             setTimeout(() => {
 
