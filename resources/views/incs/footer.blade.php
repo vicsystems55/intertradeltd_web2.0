@@ -61,7 +61,7 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>@ 2023 InterTrade Ltd.. With Love by <a href="https://vicsystems.com.ng">v</a></p>
+                    <p>@ 2023 InterTrade Ltd.. <a href="https://vicsystems.com.ng">Made by vicsystems</a></p>
                     <ul>
                         <li><a href="#">Terms &amp; Conditions </a></li>
                         <li><a href="#">Privacy Policy</a></li>
