@@ -2,8 +2,8 @@
         <footer class="footer">
 
             <!-- Button trigger modal -->
-            <example-component apiurl="{{config('app.url')}}"></example-component>
             <div class="container">
+                <example-component apiurl="{{config('app.url')}}"></example-component>
 
 
                 <div class="row">
