@@ -54,10 +54,10 @@
 
                                     </li>
 
-                                    <li class="item-level-1 ">
+                                    {{-- <li class="item-level-1 ">
                                         <a href="/shop" class="link-level-1 {{request()->is('shop')?'color-active':''}}">Store</a>
 
-                                    </li>
+                                    </li> --}}
 
                                     <li class="item-level-1">
                                         <a href="/contact" class="link-level-1 {{request()->is('contact')?'color-active':''}}">Contact</a>
