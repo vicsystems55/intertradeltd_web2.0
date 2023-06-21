@@ -68,7 +68,14 @@
 
                     <div class="col-lg-6">
 						<div class="add-comments">
-							<form class="inner-add-comments form-contact-2">
+                            @if (Session::has('msg'))
+
+                            <p class="alert alert-success">{{Session::get('msg')}}</p>
+
+                            @endif
+                            <form method="post" action="/post-message" class="inner-add-comments form-contact-2">
+
+                                @csrf
 								<div class="row">
 									<div class="col-md-6 inner-add-comments-box">
 										<input type="text" name="name" placeholder="Name" required>
@@ -77,7 +84,7 @@
 										<input type="Email" name="email" placeholder="Email" required>
 									</div>
 									<div class="col-md-12 inner-add-comments-box">
-										<input type="text" name="website" placeholder="Website" required>
+										<input type="text" name="phone" placeholder="Phone" required>
 									</div>
 									<div class="col-md-12 inner-add-comments-box">
 										<textarea name="message" placeholder="Your Message Here" required></textarea>

@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ContactFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,13 @@ Route::get('/cart', [PageController::class, 'cart']);
 Route::get('/checkout', [PageController::class, 'checkout']);
 
 Route::get('/load-calculator', [PageController::class, 'loadCalculator']);
+
+Route::post('/post-message', [ContactFormController::class, 'post_message']);
+
+
+
+
+
 
 
 
