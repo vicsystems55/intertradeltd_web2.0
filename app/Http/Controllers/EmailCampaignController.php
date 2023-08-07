@@ -19,7 +19,9 @@ class EmailCampaignController extends Controller
 
         $todaysCampaign = EmailCampaignSchedule::
         with('emailCampaign')
-        ->whereDate('date', Carbon::today())->get();
+        ->whereDay('date', Carbon::today()->day)->get();
+
+        // return $todaysCampaign;
 
         // loop over the campaigsn
         foreach ($todaysCampaign as $campaign) {
@@ -34,7 +36,14 @@ class EmailCampaignController extends Controller
 
         // send email to each member
 
+            try {
+                //code...
         Mail::to($campaign->email)->send(new NewsLetterMail($datax));
+
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+
         // update the status from unsent to sent
         $campaign->update([
             'status' => 'sent'
