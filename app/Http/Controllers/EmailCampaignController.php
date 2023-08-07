@@ -36,13 +36,13 @@ class EmailCampaignController extends Controller
 
         // send email to each member
 
-            try {
-                //code...
-        Mail::to($campaign->email)->send(new NewsLetterMail($datax));
+            // try {
+            //     //code...
+            Mail::to($campaign->email)->send(new NewsLetterMail($datax));
 
-            } catch (\Throwable $th) {
-                //throw $th;
-            }
+            // } catch (\Throwable $th) {
+            //     //throw $th;
+            // }
 
         // update the status from unsent to sent
         $campaign->update([
