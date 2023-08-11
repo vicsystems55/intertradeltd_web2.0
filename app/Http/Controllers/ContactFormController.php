@@ -31,7 +31,7 @@ class ContactFormController extends Controller
 
         Mail::to('victor@intertradeltd.biz')->send(new ContactFormMail($data));
 
-        Mail::to('enquiry@intertradeltd.biz')->send(new ContactFormMail($data));
+        // Mail::to('enquiry@intertradeltd.biz')->send(new ContactFormMail($data));
 
 
         return back()->with('msg', 'Message sent successfully.');

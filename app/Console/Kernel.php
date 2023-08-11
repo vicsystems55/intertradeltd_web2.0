@@ -27,6 +27,9 @@ class Kernel extends ConsoleKernel
 
             Artisan::call('cache:clear');
 
+            Artisan::call('route:cache');
+
+
 
              info('cache cleared');
 
