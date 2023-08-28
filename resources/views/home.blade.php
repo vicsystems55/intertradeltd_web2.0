@@ -294,6 +294,21 @@
                 <div class="projects-carousel owl-carousel owl-theme">
                     <div class="projects-item">
                         <div class="img-box">
+                            <img class="img-fluid projects-item-img" src="assets/images/projects/06_projects.jpg" alt="06 projects">
+                        </div>
+                        <div class="hover-box">
+                            <div class="text-box">
+                                <div class="tags"><a href="/projects">Solar Power Solutions</a></div>
+                                <h4><a href="/projects">PHCs Solar Electricity Supply- Delta State</a></h4>
+                            </div>
+                            <ul class="projects-icon">
+                                <li><a href="/projects"><i class="fas fa-link"></i></a></li>
+                                <li><a class="popup" href="assets/images/projects/06_projects.jpg"><i class="far fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="projects-item">
+                        <div class="img-box">
                             <img class="img-fluid projects-item-img" src="assets/images/projects/01_projects.jpg" alt="01 projects">
                         </div>
                         <div class="hover-box">
@@ -502,6 +517,27 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="blog-item">
+                            <div class="img-box">
+                                <a href="/blog" class="open-post">
+                                    <img class="img-fluid" src="assets/images/blog/00_blog.jpg" alt="01 Blog">
+                                </a>
+                                <ul>
+                                    <li><a href="">Solar Power Systems</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="text-box">
+                                <a href="/blog" class="title-blog">
+                                    <h5>50 years of the Nigerian Society For Haematology and Blood Transfusion</h5>
+                                </a>
+                                <span class="blog-date">Aug 20, 2023</span>
+                                <p>The conference was held for haematologist, paediatricians, surgeons, internal physicians, family physicians , doctors, nurses, Lab Scientists, health professionals and infact all lovers of Haematology. </p>
+                                <a href="#" class="btn-1 btn-3 link"><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="img-box">
