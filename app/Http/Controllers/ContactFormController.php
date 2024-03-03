@@ -12,7 +12,7 @@ class ContactFormController extends Controller
 
     public function post_message(Request $request) {
 
-        // return $request->all();
+        return $request->all();
 
 
 
