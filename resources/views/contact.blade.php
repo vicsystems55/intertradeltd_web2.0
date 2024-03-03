@@ -89,7 +89,7 @@
 									<div class="col-md-12 inner-add-comments-box">
 										<textarea name="message" placeholder="Your Message Here" required></textarea>
 									</div>
-                                    <div class="col-md-12 inner-add-comments-box">
+                                    <div class="col-md-6 inner-add-comments-box">
                                         <div class="g-recaptcha mt-4" data-sitekey={{config('services.recaptcha.key')}}></div>
 									</div>
 									<div class="col-md-12 inner-add-comments-box last">
