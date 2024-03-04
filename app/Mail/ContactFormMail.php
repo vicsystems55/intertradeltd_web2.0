@@ -31,6 +31,6 @@ class ContactFormMail extends Mailable
     {
         return $this->view('mails.contact_mail',[
             'data' => $this->data
-        ])->subject('New equiry on your website.');
+        ])->subject('New enquiry on your website.');
     }
 }
