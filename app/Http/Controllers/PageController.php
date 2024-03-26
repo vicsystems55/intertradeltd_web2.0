@@ -62,7 +62,7 @@ class PageController extends Controller
     {
         # code...
 
- 
+
 
         return view($slug);
     }
@@ -70,6 +70,8 @@ class PageController extends Controller
     public function shop()
     {
         # code...
+
+        return redirect('/');
 
         $products = Http::get('https://itladmin.vicsystems.com.ng/api/products');
 

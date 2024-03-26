@@ -27,16 +27,16 @@
                         </ul>
                     </div>
 
-                    <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="col-sm-6 col-md-6 col-lg-3 d-none">
                         <div class="footer-title">
                             <h4>Product</h4>
                         </div>
                         <ul class="links">
-                            <li><a href="/shop">Cold Chain Equipments</a></li>
-                            <li><a href="/shop">Batteries</a></li>
-                            <li><a href="/shop">Inverters</a></li>
-                            <li><a href="/shop">FAQs</a></li>
-                            <li><a href="/shop">Shop</a></li>
+                            <li><a href="#">Cold Chain Equipments</a></li>
+                            <li><a href="#">Batteries</a></li>
+                            <li><a href="#">Inverters</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Shop</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3">
