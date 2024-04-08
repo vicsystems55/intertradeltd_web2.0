@@ -2114,6 +2114,104 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/LoadCalculatorComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/LoadCalculatorComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      inverter_size: 0,
+      night_load: 0,
+      day_load: 0,
+      batteries: 0,
+      panels: 0,
+      sel_solar_size: '460',
+      sel_bat_size: '225',
+      queries: [{
+        load: 'Light Bulbs',
+        quantity: 10,
+        max_power: 5,
+        day_hours: 2,
+        night_hours: 12,
+        total_day_energy: 100,
+        total_night_energy: 600
+      }]
+    };
+  },
+  methods: {
+    analyze: function analyze(battery_unit, solar_unit) {
+      alert(battery_unit);
+      var keyToSum = 'max_power';
+      var _night = 'total_night_energy';
+      var _day = 'total_day_energy';
+
+      // Initialize sum
+      var sum = 0;
+      var sum_night = 0;
+      var sum_day = 0;
+
+      // Loop through the array and calculate the sum
+      for (var i = 0; i < this.queries.length; i++) {
+        sum += parseFloat(this.queries[i][keyToSum]);
+      }
+      this.inverter_size = Math.round(sum);
+      for (var _i = 0; _i < this.queries.length; _i++) {
+        sum_night += parseFloat(this.queries[_i][_night]);
+      }
+      this.night_load = sum_night;
+      for (var _i2 = 0; _i2 < this.queries.length; _i2++) {
+        sum_day += parseFloat(this.queries[_i2][_day]);
+      }
+      this.day_load = sum_day;
+      var _total_req = this.day_load + this.night_load;
+      this.batteries = Math.round(this.night_load / (battery_unit * 12));
+      this.panels = Math.round(_total_req / 8 / solar_unit);
+    },
+    removeLoad: function removeLoad(index) {
+      this.queries.splice(index, 1);
+    },
+    select_solar: function select_solar() {
+      return this.sel_bat_size;
+    },
+    addLoad: function addLoad() {
+      this.queries.push({
+        load: 'Example Load',
+        quantity: 10,
+        max_power: 0,
+        day_hours: 0,
+        night_hours: 0,
+        total_day_energy: 0,
+        total_night_energy: 0
+      });
+      console.log(this.queries);
+    },
+    calculateTotalDayEnergy: function calculateTotalDayEnergy(query) {
+      return query.quantity * query.max_power * query.day_hours;
+    },
+    calculateTotalNightEnergy: function calculateTotalNightEnergy(query) {
+      return query.quantity * query.max_power * query.night_hours;
+    },
+    updateTotalDayEnergy: function updateTotalDayEnergy(query) {
+      query.total_day_energy = query.quantity * query.max_power * query.day_hours;
+      this.updateTotalNightEnergy(query);
+    },
+    updateTotalNightEnergy: function updateTotalNightEnergy(query) {
+      query.total_night_energy = query.quantity * query.max_power * query.night_hours;
+      this.updateTotalDayEnergy(query);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -2258,6 +2356,320 @@ render._withStripped = true;
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "c"
+  }, [_c("div", {
+    staticClass: "col-md-4 py-3"
+  }, [_c("table", {
+    staticClass: "table table-striped"
+  }, [_c("tr", [_c("td", [_vm._v("Inverter Size:")]), _vm._v(" "), _c("td", {
+    staticStyle: {
+      "text-align": "right"
+    }
+  }), _vm._v(" "), _c("td", {
+    staticStyle: {
+      width: "100px",
+      "text-align": "right"
+    }
+  }, [_vm._v(_vm._s(_vm.inverter_size * 1.5) + " W")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Number of Batteries:"), _c("br"), _vm._v("\n\n                    Select size:\n                    "), _c("select", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.sel_bat_size,
+      expression: "sel_bat_size"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      id: ""
+    },
+    on: {
+      change: function change($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.sel_bat_size = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }
+    }
+  }, [_c("option", {
+    domProps: {
+      value: "225"
+    }
+  }, [_vm._v("225Ah 12V")]), _vm._v(" "), _c("option", {
+    domProps: {
+      value: "200"
+    }
+  }, [_vm._v("200Ah 12V")]), _vm._v(" "), _c("option", {
+    domProps: {
+      value: "51"
+    }
+  }, [_vm._v("51Ah 48V")])])]), _vm._v(" "), _c("td", {
+    staticStyle: {
+      "text-align": "right"
+    }
+  }, [_vm._v(_vm._s(_vm.night_load))]), _vm._v(" "), _c("td", {
+    staticStyle: {
+      width: "100px",
+      "text-align": "right"
+    }
+  }, [_vm._v(_vm._s(_vm.batteries))])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Number of Solar Panels:"), _c("br"), _vm._v("\n\n                    Select size:\n                    "), _c("select", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.sel_solar_size,
+      expression: "sel_solar_size"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      id: ""
+    },
+    on: {
+      change: [function ($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.sel_solar_size = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }, _vm.select_solar]
+    }
+  }, [_c("option", {
+    domProps: {
+      value: "280"
+    }
+  }, [_vm._v("280W")]), _vm._v(" "), _c("option", {
+    domProps: {
+      value: "410"
+    }
+  }, [_vm._v("410W")]), _vm._v(" "), _c("option", {
+    domProps: {
+      value: "460"
+    }
+  }, [_vm._v("460W")]), _vm._v(" "), _c("option", {
+    domProps: {
+      value: "550"
+    }
+  }, [_vm._v("550W")])])]), _vm._v(" "), _c("td", {
+    staticStyle: {
+      "text-align": "right"
+    }
+  }, [_vm._v(_vm._s(_vm.night_load + _vm.day_load))]), _vm._v(" "), _c("td", {
+    staticStyle: {
+      width: "100px",
+      "text-align": "right"
+    }
+  }, [_vm._v(_vm._s(_vm.panels))])])]), _vm._v(" "), _c("div", {
+    staticClass: "containe py-2"
+  }, [_c("button", {
+    staticClass: "btn btn-primary",
+    on: {
+      click: function click($event) {
+        return _vm.analyze(_vm.sel_bat_size, _vm.sel_solar_size);
+      }
+    }
+  }, [_vm._v("Calculate")])])]), _vm._v(" "), _c("table", {
+    staticClass: "table"
+  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.queries, function (query, index) {
+    return _c("tr", {
+      key: query.id
+    }, [_c("td", [_vm._v("1")]), _vm._v(" "), _c("td", [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: query.load,
+        expression: "query.load"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        type: "text"
+      },
+      domProps: {
+        value: query.load
+      },
+      on: {
+        input: function input($event) {
+          if ($event.target.composing) return;
+          _vm.$set(query, "load", $event.target.value);
+        }
+      }
+    })]), _vm._v(" "), _c("td", [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: query.quantity,
+        expression: "query.quantity"
+      }],
+      staticClass: "form-control",
+      staticStyle: {
+        width: "80px"
+      },
+      attrs: {
+        type: "number"
+      },
+      domProps: {
+        value: query.quantity
+      },
+      on: {
+        input: [function ($event) {
+          if ($event.target.composing) return;
+          _vm.$set(query, "quantity", $event.target.value);
+        }, function ($event) {
+          return _vm.updateTotalDayEnergy(query);
+        }]
+      }
+    })]), _vm._v(" "), _c("td", [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: query.max_power,
+        expression: "query.max_power"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        type: "number"
+      },
+      domProps: {
+        value: query.max_power
+      },
+      on: {
+        input: [function ($event) {
+          if ($event.target.composing) return;
+          _vm.$set(query, "max_power", $event.target.value);
+        }, function ($event) {
+          return _vm.updateTotalDayEnergy(query);
+        }]
+      }
+    })]), _vm._v(" "), _c("td", [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: query.day_hours,
+        expression: "query.day_hours"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        type: "number"
+      },
+      domProps: {
+        value: query.day_hours
+      },
+      on: {
+        input: [function ($event) {
+          if ($event.target.composing) return;
+          _vm.$set(query, "day_hours", $event.target.value);
+        }, function ($event) {
+          return _vm.updateTotalDayEnergy(query);
+        }]
+      }
+    })]), _vm._v(" "), _c("td", [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: query.night_hours,
+        expression: "query.night_hours"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        type: "number"
+      },
+      domProps: {
+        value: query.night_hours
+      },
+      on: {
+        input: [function ($event) {
+          if ($event.target.composing) return;
+          _vm.$set(query, "night_hours", $event.target.value);
+        }, function ($event) {
+          return _vm.updateTotalNightEnergy(query);
+        }]
+      }
+    })]), _vm._v(" "), _c("td", [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: query.total_day_energy,
+        expression: "query.total_day_energy"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        type: "number"
+      },
+      domProps: {
+        value: query.total_day_energy
+      },
+      on: {
+        input: function input($event) {
+          if ($event.target.composing) return;
+          _vm.$set(query, "total_day_energy", $event.target.value);
+        }
+      }
+    })]), _vm._v(" "), _c("td", [_c("input", {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: query.total_night_energy,
+        expression: "query.total_night_energy"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        type: "number"
+      },
+      domProps: {
+        value: query.total_night_energy
+      },
+      on: {
+        input: function input($event) {
+          if ($event.target.composing) return;
+          _vm.$set(query, "total_night_energy", $event.target.value);
+        }
+      }
+    })]), _vm._v(" "), _c("td", [_c("button", {
+      staticClass: "btn btn-danger",
+      on: {
+        click: function click($event) {
+          return _vm.removeLoad(index);
+        }
+      }
+    }, [_vm._v("remove")])])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "container py-3 text-center"
+  }, [_c("button", {
+    staticClass: "btn btn-primary",
+    on: {
+      click: function click($event) {
+        return _vm.addLoad();
+      }
+    }
+  }, [_vm._v("Add Load")])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("thead", [_c("tr", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Load")]), _vm._v(" "), _c("th", [_vm._v("Quantity")]), _vm._v(" "), _c("th", [_vm._v("Max. Power (W)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Day Hours (H)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Night Hours (H)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Day Energy Consumption (Wh)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Night Energy Consumption (Wh)")]), _vm._v(" "), _c("th")])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -2288,6 +2700,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('load-calculator-component', (__webpack_require__(/*! ./components/LoadCalculatorComponent.vue */ "./resources/js/components/LoadCalculatorComponent.vue")["default"]));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -37779,6 +38192,45 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/LoadCalculatorComponent.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/LoadCalculatorComponent.vue ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LoadCalculatorComponent_vue_vue_type_template_id_7d0f6e3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a& */ "./resources/js/components/LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a&");
+/* harmony import */ var _LoadCalculatorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoadCalculatorComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/LoadCalculatorComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LoadCalculatorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _LoadCalculatorComponent_vue_vue_type_template_id_7d0f6e3a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _LoadCalculatorComponent_vue_vue_type_template_id_7d0f6e3a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/LoadCalculatorComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -37795,6 +38247,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/LoadCalculatorComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/LoadCalculatorComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LoadCalculatorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./LoadCalculatorComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/LoadCalculatorComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LoadCalculatorComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*************************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -37808,6 +38276,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_LoadCalculatorComponent_vue_vue_type_template_id_7d0f6e3a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_LoadCalculatorComponent_vue_vue_type_template_id_7d0f6e3a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_LoadCalculatorComponent_vue_vue_type_template_id_7d0f6e3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/LoadCalculatorComponent.vue?vue&type=template&id=7d0f6e3a&");
 
 
 /***/ }),

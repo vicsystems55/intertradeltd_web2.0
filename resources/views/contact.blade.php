@@ -73,7 +73,7 @@
                             <p class="alert alert-success">{{Session::get('msg')}}</p>
 
                             @endif
-                            <form method="post" action="/post-message" class="inner-add-comments form-contact-2">
+                            <div method="get" action="/" class="inner-add-comments form-contact-2">
 
                                 @csrf
 								<div class="row">
@@ -93,11 +93,11 @@
                                         <div class="g-recaptcha mt-4" data-sitekey={{config('services.recaptcha.key')}}></div>
 									</div>
 									<div class="col-md-12 inner-add-comments-box last">
-										<button class="btn-1 btn-3 submit" type="submit"><span>Submit</span></button>
+										<button class="btn-1 btn-3 submit" type="button"><span>Submit</span></button>
 										<span class="out-message"></span>
 									</div>
 								</div>
-							</form>
+							</div>
 						</div>
                     </div>
                 </div>
