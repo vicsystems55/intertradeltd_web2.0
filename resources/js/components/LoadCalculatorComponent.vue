@@ -9,7 +9,7 @@
                 <tr>
                     <td>Inverter Size:</td>
                     <td style="text-align: right;"></td>
-                    <td style="width: 100px; text-align: right;">{{ inverter_size * 1.5 }} W</td>
+                    <td style="width: 100px; text-align: right;" class="h4">{{ (inverter_size * 1.5)/1000 }} kW</td>
                 </tr>
                 <tr>
                     <td>Number of Batteries:<br>
@@ -20,12 +20,12 @@
                             <option :value="'200'">200Ah 12V</option>
                             <option :value="'51'">51Ah 48V</option>
 
-                        </select>
+                        </select>~
                     </td>
 
-                    <td style="text-align: right;">{{night_load}}</td>
+                    <td style="text-align: right;" class="h4">{{night_load}}</td>
 
-                    <td style="width: 100px; text-align: right;">{{ batteries }}</td>
+                    <td style="width: 100px; text-align: right;" class="h4">{{ batteries }}</td>
                 </tr>
                 <tr>
                     <td>Number of Solar Panels:<br>
@@ -39,9 +39,9 @@
 
                         </select>
                     </td>
-                    <td style="text-align: right;">{{night_load + day_load}}</td>
+                    <td style="text-align: right;" class="h4">{{night_load + day_load}} Wh</td>
 
-                    <td style="width: 100px; text-align: right;">{{ panels }}</td>
+                    <td style="width: 100px; text-align: right;" class="h4">{{ panels }}</td>
                 </tr>
             </table>
 
@@ -150,10 +150,11 @@ export default {
 
         analyze(battery_unit, solar_unit) {
 
-            alert(battery_unit)
+            //alert(battery_unit)
             const keyToSum = 'max_power';
             const _night = 'total_night_energy';
             const _day = 'total_day_energy';
+            const _quantity = 'quantity';
 
 
 
@@ -166,7 +167,9 @@ export default {
 
             // Loop through the array and calculate the sum
             for (let i = 0; i < this.queries.length; i++) {
-                sum += parseFloat(this.queries[i][keyToSum]);
+                sum += parseFloat(this.queries[i][keyToSum] * this.queries[i][_quantity]);
+
+
             }
 
             this.inverter_size = Math.round(sum);

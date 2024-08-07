@@ -2148,10 +2148,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     analyze: function analyze(battery_unit, solar_unit) {
-      alert(battery_unit);
+      //alert(battery_unit)
       var keyToSum = 'max_power';
       var _night = 'total_night_energy';
       var _day = 'total_day_energy';
+      var _quantity = 'quantity';
 
       // Initialize sum
       var sum = 0;
@@ -2160,7 +2161,7 @@ __webpack_require__.r(__webpack_exports__);
 
       // Loop through the array and calculate the sum
       for (var i = 0; i < this.queries.length; i++) {
-        sum += parseFloat(this.queries[i][keyToSum]);
+        sum += parseFloat(this.queries[i][keyToSum] * this.queries[i][_quantity]);
       }
       this.inverter_size = Math.round(sum);
       for (var _i = 0; _i < this.queries.length; _i++) {
@@ -2382,11 +2383,12 @@ var render = function render() {
       "text-align": "right"
     }
   }), _vm._v(" "), _c("td", {
+    staticClass: "h4",
     staticStyle: {
       width: "100px",
       "text-align": "right"
     }
-  }, [_vm._v(_vm._s(_vm.inverter_size * 1.5) + " W")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Number of Batteries:"), _c("br"), _vm._v("\n\n                    Select size:\n                    "), _c("select", {
+  }, [_vm._v(_vm._s(_vm.inverter_size * 1.5 / 1000) + " kW")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Number of Batteries:"), _c("br"), _vm._v("\n\n                    Select size:\n                    "), _c("select", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -2420,11 +2422,13 @@ var render = function render() {
     domProps: {
       value: "51"
     }
-  }, [_vm._v("51Ah 48V")])])]), _vm._v(" "), _c("td", {
+  }, [_vm._v("51Ah 48V")])]), _vm._v("~\n                ")]), _vm._v(" "), _c("td", {
+    staticClass: "h4",
     staticStyle: {
       "text-align": "right"
     }
   }, [_vm._v(_vm._s(_vm.night_load))]), _vm._v(" "), _c("td", {
+    staticClass: "h4",
     staticStyle: {
       width: "100px",
       "text-align": "right"
@@ -2468,10 +2472,12 @@ var render = function render() {
       value: "550"
     }
   }, [_vm._v("550W")])])]), _vm._v(" "), _c("td", {
+    staticClass: "h4",
     staticStyle: {
       "text-align": "right"
     }
-  }, [_vm._v(_vm._s(_vm.night_load + _vm.day_load))]), _vm._v(" "), _c("td", {
+  }, [_vm._v(_vm._s(_vm.night_load + _vm.day_load) + " Wh")]), _vm._v(" "), _c("td", {
+    staticClass: "h4",
     staticStyle: {
       width: "100px",
       "text-align": "right"
