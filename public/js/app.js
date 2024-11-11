@@ -2135,6 +2135,9 @@ __webpack_require__.r(__webpack_exports__);
       panels: 0,
       sel_solar_size: '460',
       sel_bat_size: '225',
+      total_load_req: 0,
+      sun_hours: 8,
+      panel_energy: 0,
       queries: [{
         load: 'Light Bulbs',
         quantity: 10,
@@ -2148,7 +2151,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     analyze: function analyze(battery_unit, solar_unit) {
-      //alert(battery_unit)
+      // alert(this.sun_hours)
       var keyToSum = 'max_power';
       var _night = 'total_night_energy';
       var _day = 'total_day_energy';
@@ -2173,6 +2176,8 @@ __webpack_require__.r(__webpack_exports__);
       }
       this.day_load = sum_day;
       var _total_req = this.day_load + this.night_load;
+      this.total_load_req = _total_req;
+      this.panel_energy = Math.round(this.total_load_req / this.sun_hours);
       this.batteries = Math.round(this.night_load / (battery_unit * 12));
       this.panels = Math.round(_total_req / 8 / solar_unit);
     },
@@ -2181,6 +2186,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     select_solar: function select_solar() {
       return this.sel_bat_size;
+    },
+    select_hours: function select_hours() {
+      // alert(this.sun_hours)
+      // return this.sun_hours;
     },
     addLoad: function addLoad() {
       this.queries.push({
@@ -2375,74 +2384,49 @@ var render = function render() {
   return _c("div", {
     staticClass: "c"
   }, [_c("div", {
-    staticClass: "col-md-4 py-3"
+    staticClass: "col-md-6 py-3"
+  }, [_c("div", {
+    staticClass: "py-5"
   }, [_c("table", {
-    staticClass: "table table-striped"
-  }, [_c("tr", [_c("td", [_vm._v("Inverter Size:")]), _vm._v(" "), _c("td", {
+    staticClass: "table table-striped card"
+  }, [_c("tbody", [_vm._m(0), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Total Power Requirement\n                            "), _c("br"), _vm._v(" "), _c("h6", {
     staticStyle: {
-      "text-align": "right"
+      "font-weight": "bold",
+      color: "red"
     }
-  }), _vm._v(" "), _c("td", {
-    staticClass: "h4",
+  }, [_vm._v(_vm._s(_vm.inverter_size) + " w")])]), _vm._v(" "), _c("td", [_vm._v("Total Panel Capacity: "), _c("br"), _vm._v(" "), _c("h6", {
     staticStyle: {
-      width: "100px",
-      "text-align": "right"
+      "font-weight": "bold",
+      color: "red"
     }
-  }, [_vm._v(_vm._s(_vm.inverter_size * 1.5 / 1000) + " kW")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Number of Batteries:"), _c("br"), _vm._v("\n\n                    Select size:\n                    "), _c("select", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.sel_bat_size,
-      expression: "sel_bat_size"
-    }],
-    staticClass: "form-control",
-    attrs: {
-      id: ""
-    },
+  }, [_vm._v(_vm._s(_vm.panel_energy) + " w")])]), _vm._v(" "), _c("td", [_vm._v("Total Load Consumption : "), _c("br"), _vm._v(" "), _c("h6", {
+    staticStyle: {
+      "font-weight": "bold",
+      color: "red"
+    }
+  }, [_vm._v(_vm._s(_vm.total_load_req) + " wh")])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)])])]), _vm._v(" "), _c("div", {
+    staticClass: "containe py-2"
+  }, [_c("button", {
+    staticClass: "btn btn-primary",
     on: {
-      change: function change($event) {
-        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
-          return o.selected;
-        }).map(function (o) {
-          var val = "_value" in o ? o._value : o.value;
-          return val;
-        });
-        _vm.sel_bat_size = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      click: function click($event) {
+        return _vm.analyze(_vm.sel_bat_size, _vm.sel_solar_size);
       }
     }
-  }, [_c("option", {
-    domProps: {
-      value: "225"
-    }
-  }, [_vm._v("225Ah 12V")]), _vm._v(" "), _c("option", {
-    domProps: {
-      value: "200"
-    }
-  }, [_vm._v("200Ah 12V")]), _vm._v(" "), _c("option", {
-    domProps: {
-      value: "51"
-    }
-  }, [_vm._v("51Ah 48V")])]), _vm._v("~\n                ")]), _vm._v(" "), _c("td", {
-    staticClass: "h4",
-    staticStyle: {
-      "text-align": "right"
-    }
-  }, [_vm._v(_vm._s(_vm.night_load))]), _vm._v(" "), _c("td", {
-    staticClass: "h4",
-    staticStyle: {
-      width: "100px",
-      "text-align": "right"
-    }
-  }, [_vm._v(_vm._s(_vm.batteries))])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Number of Solar Panels:"), _c("br"), _vm._v("\n\n                    Select size:\n                    "), _c("select", {
+  }, [_vm._v("Calculate")])])]), _vm._v(" "), _c("div", {
+    staticClass: "py-3 col-md-4"
+  }, [_c("h6", {
+    staticClass: "py-2"
+  }, [_vm._v("Select Region:")]), _vm._v(" "), _c("select", {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.sel_solar_size,
-      expression: "sel_solar_size"
+      value: _vm.sun_hours,
+      expression: "sun_hours"
     }],
     staticClass: "form-control",
     attrs: {
-      id: ""
+      id: "kl"
     },
     on: {
       change: [function ($event) {
@@ -2452,48 +2436,24 @@ var render = function render() {
           var val = "_value" in o ? o._value : o.value;
           return val;
         });
-        _vm.sel_solar_size = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
-      }, _vm.select_solar]
+        _vm.sun_hours = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }, _vm.select_hours]
     }
   }, [_c("option", {
     domProps: {
-      value: "280"
+      value: "5.2"
     }
-  }, [_vm._v("280W")]), _vm._v(" "), _c("option", {
+  }, [_vm._v("North")]), _vm._v(" "), _c("option", {
     domProps: {
-      value: "410"
+      value: "5"
     }
-  }, [_vm._v("410W")]), _vm._v(" "), _c("option", {
+  }, [_vm._v("North Central")]), _vm._v(" "), _c("option", {
     domProps: {
-      value: "460"
+      value: "4.3"
     }
-  }, [_vm._v("460W")]), _vm._v(" "), _c("option", {
-    domProps: {
-      value: "550"
-    }
-  }, [_vm._v("550W")])])]), _vm._v(" "), _c("td", {
-    staticClass: "h4",
-    staticStyle: {
-      "text-align": "right"
-    }
-  }, [_vm._v(_vm._s(_vm.night_load + _vm.day_load) + " Wh")]), _vm._v(" "), _c("td", {
-    staticClass: "h4",
-    staticStyle: {
-      width: "100px",
-      "text-align": "right"
-    }
-  }, [_vm._v(_vm._s(_vm.panels))])])]), _vm._v(" "), _c("div", {
-    staticClass: "containe py-2"
-  }, [_c("button", {
-    staticClass: "btn btn-primary",
-    on: {
-      click: function click($event) {
-        return _vm.analyze(_vm.sel_bat_size, _vm.sel_solar_size);
-      }
-    }
-  }, [_vm._v("Calculate")])])]), _vm._v(" "), _c("table", {
+  }, [_vm._v("South ")])])]), _vm._v(" "), _c("table", {
     staticClass: "table"
-  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.queries, function (query, index) {
+  }, [_vm._m(3), _vm._v(" "), _c("tbody", _vm._l(_vm.queries, function (query, index) {
     return _c("tr", {
       key: query.id
     }, [_c("td", [_vm._v("1")]), _vm._v(" "), _c("td", [_c("input", {
@@ -2647,7 +2607,7 @@ var render = function render() {
           _vm.$set(query, "total_night_energy", $event.target.value);
         }
       }
-    })]), _vm._v(" "), _c("td", [_c("button", {
+    })]), _vm._v(" "), _vm._m(4, true), _vm._v(" "), _c("td", [_c("button", {
       staticClass: "btn btn-danger",
       on: {
         click: function click($event) {
@@ -2669,7 +2629,79 @@ var render = function render() {
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("thead", [_c("tr", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Load")]), _vm._v(" "), _c("th", [_vm._v("Quantity")]), _vm._v(" "), _c("th", [_vm._v("Max. Power (W)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Day Hours (H)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Night Hours (H)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Day Energy Consumption (Wh)")]), _vm._v(" "), _c("th", [_vm._v("Avg. Night Energy Consumption (Wh)")]), _vm._v(" "), _c("th")])]);
+  return _c("tr", [_c("td", [_vm._v("Inverter")]), _vm._v(" "), _c("td", [_vm._v("Panels")]), _vm._v(" "), _c("td", [_vm._v("Battery")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("tr", [_c("td"), _vm._v(" "), _c("td", [_vm._v("Select Panel Capacity\n                            "), _c("select", {
+    staticClass: "form-control",
+    attrs: {
+      name: "",
+      id: ""
+    }
+  }, [_c("option", {
+    attrs: {
+      value: ""
+    }
+  }, [_vm._v("280w")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: ""
+    }
+  }, [_vm._v("460w")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: ""
+    }
+  }, [_vm._v("550w")])])]), _vm._v(" "), _c("td", [_vm._v("Select Battery Size\n                            "), _c("select", {
+    staticClass: "form-control",
+    attrs: {
+      name: "",
+      id: ""
+    }
+  }, [_c("option", {
+    attrs: {
+      value: ""
+    }
+  }, [_vm._v("GEL 225Ah [12v]")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: ""
+    }
+  }, [_vm._v("OPZV 200Ah [12v]")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: ""
+    }
+  }, [_vm._v("LITHIUM ION 100Ah [51.2v]")])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("tr", [_c("td", [_vm._v("Inverter Size Selection\n                            "), _c("br"), _vm._v(" "), _c("h6", {
+    staticStyle: {
+      "font-weight": "bold",
+      color: "green"
+    }
+  }, [_vm._v("0.00 w")])]), _vm._v(" "), _c("td", [_vm._v("Number of panels\n                            "), _c("br"), _vm._v(" "), _c("h6", {
+    staticStyle: {
+      "font-weight": "bold",
+      color: "green"
+    }
+  }, [_vm._v("0")])]), _vm._v(" "), _c("td", [_vm._v("Number of Batteries\n                            "), _c("br"), _vm._v(" "), _c("h6", {
+    staticStyle: {
+      "font-weight": "bold",
+      color: "green"
+    }
+  }, [_vm._v("0")])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("thead", [_c("tr", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Load")]), _vm._v(" "), _c("th", [_vm._v("Quantity")]), _vm._v(" "), _c("th", [_vm._v("Max. Power (W)")]), _vm._v(" "), _c("th", [_vm._v("Day Hrs (H)")]), _vm._v(" "), _c("th", [_vm._v("Night Hrs (H)")]), _vm._v(" "), _c("th", [_vm._v("Day Energy (Wh)")]), _vm._v(" "), _c("th", [_vm._v("Night Energy (Wh)")]), _vm._v(" "), _c("th", [_vm._v("Avg. % Ext. Source")]), _vm._v(" "), _c("th")])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("td", [_c("input", {
+    staticClass: "form-control",
+    attrs: {
+      type: "number"
+    }
+  })]);
 }];
 render._withStripped = true;
 

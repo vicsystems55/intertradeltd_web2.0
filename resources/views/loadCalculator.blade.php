@@ -1,8 +1,8 @@
-@extends('layouts.loadbase')
+@extends('layouts.baze')
 
 @section('content')
-<h5 class="bg-primary">
-    <marquee behavior="" direction=""><span class="text-warning">Trial version - 5 days left, upgrade to continue using service</span></marquee>
+<h5 class="bg-danger">
+    <marquee behavior="" direction=""><span class="text-white">Use a licensed version to continue using this service</span></marquee>
 </h5>
 
 
