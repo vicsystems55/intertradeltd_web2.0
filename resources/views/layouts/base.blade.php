@@ -59,7 +59,7 @@
         <script async src="https://www.google.com/recaptcha/api.js"></script>
 
         <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -69,7 +69,7 @@
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
+    </script> --}}
     <!--End of Tawk.to Script-->
 
     </head>
@@ -81,6 +81,41 @@
 
             @include('incs.footer')
         </div>
+
+        <!-- WhatsApp Sticky Button -->
+<a href="https://wa.me/+2348057674378"
+target="_blank"
+class="whatsapp-float">
+<img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+</a>
+
+<style>
+ .whatsapp-float {
+     position: fixed;
+     bottom: 80px;
+     right: 20px;
+     z-index: 1000;
+     background-color: #25d366; /* WhatsApp green */
+     border-radius: 50%;
+     width: 60px;
+     height: 60px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+ }
+
+ .whatsapp-float img {
+     width: 40px;
+     height: 40px;
+ }
+
+ .whatsapp-float:hover {
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+     transform: scale(1.1);
+     transition: 0.3s;
+ }
+</style>
 
 
 
