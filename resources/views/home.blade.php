@@ -193,7 +193,7 @@
                             <i class="ar-icons-checklist"></i>
                             <div class="content">
                                 <div class="counter statistic-counter">700</div>
-                                <div class="counter-name">Projects Completed in 2023</div>
+                                <div class="counter-name">Projects Completed in 2024</div>
                             </div>
                         </div>
                     </div>
