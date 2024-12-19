@@ -12,8 +12,31 @@ class PageController extends Controller
     public function index()
     {
 
+        try {
+          // Use Laravel's HTTP client to make the request
+          $url = "https://graph.instagram.com/v21.0/17841448542035175/media?fields=id,caption,media_url,media_type&access_token=IGAAMyOFxY3NZABZAFBfN3ptVEVhT0NibmZA4ZATQxVjhTaUpla3FKbDM2LWJmME5keHhoQlFPS1F2R093NDRVYlhSVDBQbHp0dnNPaU1ncEs4d3RZAcm52VlpPSFA1eTJhdUtaZAXJ2RHVTc0lKUHd6WTBfSDBPZAm4wWGFQVFV0d2huZAwZDZD";
 
-        return view('home');
+          // Fetch data using Laravel HTTP Client
+          $response = \Illuminate\Support\Facades\Http::get($url);
+
+          if ($response->failed()) {
+              throw new \Exception('Error fetching Instagram posts: ' . $response->body());
+          }
+
+          // Decode JSON response and filter results
+          $instagramPosts = collect($response->json('data'))
+          ->filter(fn($post) => isset($post['media_url']) && $post['media_type'] === 'IMAGE')
+          ->take(10)
+          ->toArray();
+      } catch (\Exception $e) {
+          // Handle any errors
+          $instagramPosts = [];
+        //   \Log::error($e->getMessage());
+      }
+
+    //   return $instagramPosts;
+
+        return view('home', compact('instagramPosts'));
     }
 
     public function about()

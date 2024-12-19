@@ -502,8 +502,61 @@
             </div>
         </section>
 
+        <section class="projects home-2 py-100-70">
+            <div class="container">
+                <div class="sec-title home-2">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h2>Stay up to date</h2>
+                            <h3>Latest from our social media platforms</h3>
+                        </div>
+                        <div class="col-lg-5 d-flex align-items-center">
+
+                        </div>
+                    </div>
+                </div>
+				<div class="row">
+
+                    @if(!empty($instagramPosts))
+
+                    @foreach ($instagramPosts as $instagramPost)
+
+
+					<div class="col-md-4 col-lg-3">
+						<div class="projects-item">
+							<span></span>
+							<div class="img-box">
+								<img class="img-fluid projects-item-img" src="{{$instagramPost['media_url']}}" alt="01 projects">
+							</div>
+							<div class="hover-box">
+								<div class="text-box">
+									{{-- <div class="tags"><a href="">Cold Chain</div> --}}
+									<h4><a href="">{{$instagramPost['caption']??''}}</a></h4>
+								</div>
+								<ul class="projects-icon">
+									<li><a href=""><i class="fas fa-link"></i></a></li>
+									<li><a class="popup" href="{{$instagramPost['media_url']}}"><i class="far fa-eye"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+
+
+                    @endforeach
+
+                    @endif
+
+
+
+				</div>
+            </div>
+        </section>
+
+
         <!-- :: Blog -->
-        <section class="blog py-100-70">
+        <section class="blog testimonial py-100-70">
             <div class="container">
                 <div class="sec-title">
                     <div class="row">
