@@ -26,7 +26,7 @@ class PageController extends Controller
           // Decode JSON response and filter results
           $instagramPosts = collect($response->json('data'))
           ->filter(fn($post) => isset($post['media_url']) && $post['media_type'] === 'IMAGE')
-          ->take(10)
+          ->take(8)
           ->toArray();
       } catch (\Exception $e) {
           // Handle any errors
