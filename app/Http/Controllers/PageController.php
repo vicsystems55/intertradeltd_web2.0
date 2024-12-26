@@ -12,6 +12,8 @@ class PageController extends Controller
     public function index()
     {
 
+        
+
         try {
           // Use Laravel's HTTP client to make the request
           $url = "https://graph.instagram.com/v21.0/17841448542035175/media?fields=id,caption,media_url,media_type&access_token=IGAAMyOFxY3NZABZAFBfN3ptVEVhT0NibmZA4ZATQxVjhTaUpla3FKbDM2LWJmME5keHhoQlFPS1F2R093NDRVYlhSVDBQbHp0dnNPaU1ncEs4d3RZAcm52VlpPSFA1eTJhdUtaZAXJ2RHVTc0lKUHd6WTBfSDBPZAm4wWGFQVFV0d2huZAwZDZD";
