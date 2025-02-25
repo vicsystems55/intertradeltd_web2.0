@@ -30,56 +30,111 @@
                             <div class="img-box" style="background-image: url(assets/images/about-us/01_about-us.jpg)"></div>
                         </div>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-7" style="background-color: #f8f9fa; padding: 50px;" class="py-5">
                         <div class="about-us-text-box">
                             <div class="sec-title">
-
                                 <h3>Who we are</h3>
-                                <h6 style="text-transform: none;" class="sec-explain">INTER TRADE LIMITED is a Nigerian limited liability company that was established on May 9th, 2002 as an engineering company. From the outset, the company has focused on providing technical international trading services for solar and engineering solutions. Our services cover everything from consultancy to turnkey projects, and we have extensive experience in a variety of areas, including:</h6>
+                                <h6 class="sec-explain">
+                                    INTER TRADE LIMITED is a Nigerian limited liability company established on May 9th, 2002, as an engineering company. The company is led by CEO Engr. Ogedegbe Eghosa and has a sister company, Source Water Limited. Since its inception, Inter-Trade has been at the forefront of technical international trading, specializing in solar and engineering solutions. Our expertise spans consultancy to turnkey project execution in various sectors, including:
+                                </h6>
                             </div>
-
-                            <div class="row">
-                                <div class="col-sm-7">
-
-                                    <ul class="about-us-core-list">
-                                        <li class="item">
-                                            <i class="fas fa-check"></i>
-                                            <h4>Cold chain equipment solutions</h4>
-                                        </li>
-                                        <li class="item">
-                                            <i class="fas fa-check"></i>
-                                            <h4>Solar Consultancy Solutions</h4>
-                                        </li>
-                                        <li class="item">
-                                            <i class="fas fa-check"></i>
-                                            <h4>Solar Powered Systems</h4>
-                                        </li>
-
-                                    </ul>
-                                    <div class="img-person d-none">
-                                        <img class="img-fluid about-us-person" src="assets/images/about-us/01_about-us-person.jpg" alt="About US Person">
-                                        <img class="img-fluid signature" src="assets/images/01_signature.png" alt="About US Signature">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="sec-title">
-
-                                <h3>Our Mission</h3>
-                                <h6 style="text-transform: none;" class="sec-explain">To ensure delivery of quality and sustainable engineering solutions and services in homes, offices, and health sectors.</h6>
-                            </div>
-
-                            <div class="sec-title">
-
-                                <h3>Our Vision</h3>
-                                <h6 style="text-transform: none;" class="sec-explain">To provide cost effective renewable energy solutions and offering quality bio-medical equipment that help reshape industries across Africa through our partners.</h6>
-                            </div>
-
                         </div>
                     </div>
                 </div>
+
+                <div class="row" style="padding: 50px;" class="py-5">
+                    <div class="col-lg-5">
+                        <img src="assets/images/about-us/cold-chain.jpg" class="img-fluid" alt="Cold Chain Equipment Solutions">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="sec-title">
+                            <h3>Cold Chain Equipment Solutions</h3>
+                            <h6 class="sec-explain">
+                                Inter-Trade Ltd. is a key provider of cold chain equipment solutions in partnership with Haier Biomedical Co., Ltd. We supply WHO/PQS qualified vaccine cold chain equipment and serve as the official representative of Haier Biomedical in Nigeria. Our services include procurement, supply, distribution, installation, routine maintenance, and training for cold chain equipment.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: #f8f9fa; padding: 50px;" class="py-5">
+                    <div class="col-lg-5 order-lg-2">
+                        <img src="assets/images/about-us/solar.jpg" class="img-fluid" alt="Solar Consultancy Solutions">
+                    </div>
+                    <div class="col-lg-7 order-lg-1">
+                        <div class="sec-title">
+                            <h3>Solar Consultancy Solutions</h3>
+                            <h6 class="sec-explain">
+                                We offer consultancy services to government agencies, NGOs, and private entities in rural development projects. Our expertise includes project design, technology selection, cost analysis, training, and monitoring for solar-powered solutions, ensuring sustainability and efficiency.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style=" padding: 50px;" class="py-5">
+                    <div class="col-lg-5">
+                        <img src="assets/images/about-us/water-supply.jpg"  class="img-fluid" alt="Water Supply Solutions">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="sec-title">
+                            <h3>Water Supply Solutions</h3>
+                            <h6 class="sec-explain">
+                                Through Source Water Ltd., we provide comprehensive water supply solutions, including geophysical investigations, borehole drilling, water treatment, distribution network design, and drainage system construction.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: #f8f9fa; padding: 50px;" class="py-5">
+                    <div class="col-lg-5 order-lg-2">
+                        <img src="assets/images/about-us/training.jpg" class="img-fluid" alt="Training Center">
+                    </div>
+                    <div class="col-lg-7 order-lg-1">
+                        <div class="sec-title">
+                            <h3>Training Center</h3>
+                            <h6 class="sec-explain">
+                                Our state-of-the-art training center accommodates over 80 individuals and offers uninterrupted power supply, high-speed fiber optic internet, smart boards, and advanced sound systems. We provide a comfortable and productive environment for skill development and professional training.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: #e9ecef; padding: 50px;" class="py-5">
+                    <div class="col-lg-5">
+                        <img src="assets/images/about-us/showroom.jpg" class="img-fluid" alt="Haier Biomedical Showroom">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="sec-title">
+                            <h3>Haier Biomedical Showroom</h3>
+                            <h6 class="sec-explain">
+                                Our showroom features advanced solar-powered systems, cold chain equipment, and medical devices, showcasing the latest innovations in renewable energy and healthcare technology.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: #f8f9fa; padding: 50px;" class="py-5">
+
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="sec-title">
+                            <h3>Our Mission</h3>
+                            <h6 class="sec-explain">
+                                To ensure the delivery of quality and sustainable engineering solutions and services in homes, offices, and healthcare sectors.
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="sec-title">
+                            <h3>Our Vision</h3>
+                            <h6 class="sec-explain">
+                                To provide cost-effective renewable energy solutions and offer high-quality biomedical equipment, reshaping industries across Africa through our strategic partnerships.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+
         </section>
 
                <!-- :: Statistic -->

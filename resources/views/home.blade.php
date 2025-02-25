@@ -116,6 +116,10 @@
                                         <img class="img-fluid about-us-person" src="assets/images/about-us/01_about-us-person.jpg" alt="About US Person">
                                         <img class="img-fluid signature" src="assets/images/01_signature.png" alt="About US Signature">
                                     </div>
+                                    <div class="btn-box">
+
+                                        <a class="btn-1 btn-3 ml-30" href="/about"><span>Read More</span></a>
+                                    </div>
                                 </div>
 
                             </div>
