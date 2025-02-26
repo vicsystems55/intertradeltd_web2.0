@@ -4,7 +4,7 @@
         <!-- :: Header -->
         <section class="header" id="page">
             <div class="header-carousel owl-carousel owl-theme">
-                <div class="sec-hero display-table" style="background-image: url(assets/images/header/01_header.jpg)">
+                <div class="sec-hero display-table" style="background-image: url(assets/images/header/_header.jpg)">
                     <div class="table-cell">
                         <div class="overlay"></div>
                         <div class="container">
