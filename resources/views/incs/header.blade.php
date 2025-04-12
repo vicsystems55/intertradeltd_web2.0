@@ -15,7 +15,7 @@
             </div>
 
             <!-- :: All Navbar -->
-            <header class="all-navbar home-2">
+            <header class="all-navbar fixed-top">
                 <!-- :: Navbar -->
                 <nav class="nav-bar">
                     <div class="container">

@@ -5,16 +5,16 @@
         <section class="header" id="page">
             <div class="header-carousel owl-carousel owl-theme">
                 <div class="sec-hero display-table" style="background-image: url(assets/images/header/header.jpg)">
-                    <div class="table-cell">
+                    <div class="table-cell" >
                         <div class="overlay"></div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <div class="banner">
+                                    <div class="banner " style="margin-top: -90px;">
                                         <div class="top-handline">GREEN ENERGY</div>
                                         <h1 class="handline">Solar Installation and Maintenance</h1>
                                         <p class="about-website">we provide end-to-end solutions for setting up and maintaining solar power systems. Our services cover the entire range of equipment required for generating clean and renewable energy, including:</p>
-                                        <ul class="header-list-features ">
+                                        {{-- <ul class="header-list-features ">
                                             <li class="item">
                                                 <i class="fas fa-check"></i><h5>Solar panels</h5>
                                             </li>
@@ -24,7 +24,10 @@
                                             <li class="item">
                                                 <i class="fas fa-check"></i><h5>Inverters and more...</h5>
                                             </li>
-                                        </ul>
+
+
+                                        </ul> --}}
+
                                         <div class="btn-box">
 
                                             <a class="btn-1 btn-2 ml-30" href="/services"><span>Our Services</span></a>
@@ -45,6 +48,7 @@
                                         <div class="top-handline">ULT DEVICES</div>
                                         <h1 class="handline">Cold Chain Equipments Solutions</h1>
                                         <p class="about-website">We provide specialized devices and technologies used to maintain the integrity and safety of temperature-sensitive products throughout the supply chain.</p>
+
                                         <div class="btn-box">
                                             <a class="btn-1 btn-2" href="/about"><span>About Us</span></a>
                                         </div>
