@@ -10,7 +10,7 @@ class PageController extends Controller
     //
 
     public function shortUrl(){
-        return redirect()->away('https://docs.google.com/presentation/d/1MtVDBBDmFrzGP2g2hVEIjwFi8FMNjdT20uee-bn0GWo/edit#slide=id.g34b59cf64a4_0_12');
+        return redirect()->away('https://docs.google.com/presentation/d/1MtVDBBDmFrzGP2g2hVEIjwFi8FMNjdT20uee-bn0GWo/edit#slide=id.g34b2edd2127_2_1');
     }
 
     public function index()
