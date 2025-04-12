@@ -9,10 +9,14 @@ class PageController extends Controller
 {
     //
 
+    public function shortUrl(){
+        return redirect()->away('https://bit.ly/4lnsLER');
+    }
+
     public function index()
     {
 
-        
+
 
         try {
           // Use Laravel's HTTP client to make the request

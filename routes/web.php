@@ -46,9 +46,7 @@ Route::get('/checkout', [PageController::class, 'checkout']);
 
 Route::get('/load-calculator', [PageController::class, 'loadCalculator']);
 
-Route::get('/rtmd-training-2025', function () {
-    return redirect()->away('https://bit.ly/4lnsLER');
-});
+Route::get('/rtmd-training-2025', [PageController::class, 'shortUrl']);
 
 
 Route::post('/post-message', [ContactFormController::class, 'post_message']);
